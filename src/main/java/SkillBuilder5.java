@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This class provides various Skill Builder 5 - Array
  * exercises.
  *
- * @author (you)
- * @version (a version number or a date)
+ * @author (Leen Jean)
+ * @version (03/15/2024e)
  */
 public class SkillBuilder5
 {
@@ -17,8 +20,15 @@ public class SkillBuilder5
      */
     public static double[] prefixAverage(double[] data)
     {
-        //TODO: replace this line with your code.
-        return null;
+        double[] prefixAverages = new double [data.length];
+        double sum = 0;
+
+        for(int i = 0; i < data.length; i++){
+            sum += data[i];
+            prefixAverages[i] = sum / (i + 1);
+        }
+        
+        return prefixAverages;
     }
 
     /**
@@ -31,8 +41,13 @@ public class SkillBuilder5
      */
     public static int  indexOf(int searchValue, int[] anArray)
     {
-        //TODO: replace this line with your code.
-        return 0;
+        for (int i = 0; i < anArray.length; i++ ) {
+            if(anArray[i] == searchValue){
+                return i;
+            }
+        }
+
+        return -1;
     }
 
     /**
@@ -45,8 +60,13 @@ public class SkillBuilder5
      */
     public static int  indexOf(String s, String[] anArray)
     {
-        //TODO: replace this line with your code.
-        return 0;
+        for (int i = 0; i < anArray.length; i++ ) {
+            if (anArray[i].equals(s)){
+
+            }
+        }
+
+        return -1;
     }
 
     /**
@@ -58,8 +78,15 @@ public class SkillBuilder5
      */
     public static String[] remove(String s, String[] anArray)
     {
-        // add your code here
-        return null;
+        List<String> result = new ArrayList<>();
+
+        for (String word : anArray ){
+            if(!word.equals(s)){
+                result.add(word);
+            }
+
+        }
+        return result.toArray(new String[0]);
     }
 
     /**
@@ -68,6 +95,14 @@ public class SkillBuilder5
      */
     public static void reverse(int[] anArray)
     {
-        // add your code here
+        int begin = 0;
+        int end = anArray.length -1;
+        while (begin < end) {
+            int temp = anArray[end];
+            anArray[begin] = anArray[end];
+            anArray[end] = temp;
+            begin ++;
+            end --;
+        }
     }
 }
