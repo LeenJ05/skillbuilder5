@@ -98,7 +98,7 @@ public class SkillBuilder5
         int begin = 0;
         int end = anArray.length -1;
         while (begin < end) {
-            int temp = anArray[end];
+            int temp = anArray[begin];
             anArray[begin] = anArray[end];
             anArray[end] = temp;
             begin ++;
