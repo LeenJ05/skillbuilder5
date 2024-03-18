@@ -47,7 +47,7 @@ public class SkillBuilder5
             }
         }
 
-        return 0;
+        return -1;
     }
 
     /**
