@@ -78,15 +78,15 @@ public class SkillBuilder5
      */
     public static String[] remove(String s, String[] anArray)
     {
-        List<String> result = new ArrayList<>();
+        List<String> resultList = new ArrayList<>();
 
         for (String word : anArray ){
             if(!word.equals(s)){
-                result.add(word);
+                resultList.add(word);
             }
 
         }
-        return result.toArray(new String[0]);
+        return resultList.toArray(new String[0]);
     }
 
     /**
