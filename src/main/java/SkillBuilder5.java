@@ -62,11 +62,12 @@ public class SkillBuilder5
     {
         for (int i = 0; i < anArray.length; i++ ) {
             if (anArray[i].equals(s)){
+                return i;
 
             }
         }
 
-        return 0;
+        return -1;
     }
 
     /**
